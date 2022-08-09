@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+nav{
+    background-color: rgb(114, 114, 171);
+    width: 100%;
+    padding: .5em;
+    
+}
+
+.navcontainer{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+
+.navcontainer h1 a{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: azure;
+    text-transform: uppercase;
+    
+
+}
+
+.navcontainer #menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navcontainer li{
+    margin: 1em;
+    list-style: none;
+}
+.navcontainer li a{
+    text-decoration: none;
+    color: azure;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    transition: all .5ms;
+}
+
+.navcontainer li a:hover{
+    color: rgb(57, 43, 27);
+}
+
+.add{
+    border: 2px solid white;
+    padding: .5em 1em;
+    border-radius: 25px;
+
+}
+
+.add:hover{
+    color: rgb(57, 43, 27);
+    border: 2px solid rgb(57, 43, 27);
+}
+
+.handburger{
+    position: sticky;
+    top: 12px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+}
+
+.line{
+   
+    background-color: white;
+    width: 100%;
+    height: 3px;
+}
+
+.change .line1{
+    transform: rotateZ(-45deg) translate(-8px,6px);
+}
+.change .line2{
+   opacity: 0;;
+}
+.change .line3{
+    transform: rotateZ(45deg) translate(-8px,-6px);
+}
+
+
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 43px;
+    background-color: rgb(114, 114, 171);
+    color: white;
+    font-size: 1.1rem;
+    z-index: 1;
+}
+
+
+/* reponsive start here */
+
+
+
+
+@media (max-width:640px) {
+    .navcontainer{
+        width: 100%;
+        padding-left: 1em;
+    }
+}
+
+
+@media (max-width:500px) {
+    .navcontainer #menu{
+        display: none;
+    }
+
+    .change #menu{
+        display: block;
+    }
+
+    .handburger{
+        display: flex;
+        z-index: 1;
+    }
+    
+    .navcontainer li a:hover{
+        color: rgb(114, 114, 171);
+    }
+    
+    
+    
+    .add:hover{
+        color: rgb(57, 43, 27);
+        border: 2px solid rgb(114, 114, 171);
+    }
+
+    #menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        background-color: rgba(4, 4, 4,0.9);
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        padding-top: 5em;
+
+    }
+
+    .add{
+        border: 2px solid white;
+        padding: .2em .5em;
+        border-radius: 25px;
+    
+    }
+}
+
+
+
